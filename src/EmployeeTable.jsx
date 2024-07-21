@@ -4,7 +4,6 @@ import "./EmployeeTable.css"; // Import the CSS file
 function EmployeeTable() {
   const [employees, setEmployees] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [error, setError] = useState(null);
   const employeesPerPage = 10;
 
   useEffect(() => {
@@ -16,7 +15,7 @@ function EmployeeTable() {
         return response.json();
       })
       .then((data) => setEmployees(data))
-      .catch((error) => setError("failed to fetch data"));
+      .catch((error) => alert("Failed to fetch data"));
   }, []);
 
   const handleClickNext = () => {
@@ -30,10 +29,6 @@ function EmployeeTable() {
       setCurrentPage(currentPage - 1);
     }
   };
-
-  if (error) {
-    return <div className="error">{error}</div>;
-  }
 
   const indexOfLastEmployee = currentPage * employeesPerPage;
   const indexOfFirstEmployee = indexOfLastEmployee - employeesPerPage;
