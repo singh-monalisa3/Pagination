@@ -1,0 +1,60 @@
+.employee-table-container {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .employee-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .employee-table th, .employee-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .employee-table th {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .employee-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .employee-table tr:hover {
+    background-color: #ddd;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .pagination button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .pagination button:hover {
+    background-color: #45a049;
+  }
+  
+  .pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .pagination span {
+    margin: 0 10px;
+    font-size: 16px;
+  }
+  
